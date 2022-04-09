@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">desafio2dsm_lt171997_au171965</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="save">Save</string>
+    <string name="pelicula">Pelicula</string>
+    <string name="nombre_de_pelicula">Nombre de pelicula</string>
+    <string name="descripci_n_de_la_pelicula">Descripción de la pelicula</string>
+    <string name="a_o_de_estreno">Año de estreno</string>
+    <string name="calificaci_n_1_4">Calificación (1-4)</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
