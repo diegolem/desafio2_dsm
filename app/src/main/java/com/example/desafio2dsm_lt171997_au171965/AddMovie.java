@@ -40,9 +40,9 @@ public class AddMovie extends AppCompatActivity {
         txtReleaseYear.setText(releaseYear);
     }
 
-    public void cancelar(View v){ finish(); }
+    public void cancel(View v){ finish(); }
 
-    public void guardar(View v){
+    public void save(View v){
         String title = txtTitle.getText().toString();
         String description = txtDescription.getText().toString();
         String releaseyear = txtReleaseYear.getText().toString();
