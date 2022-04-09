@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.widget.Toast;
+
 import com.example.desafio2dsm_lt171997_au171965.model.Movie;
 
 public class AddMovie extends AppCompatActivity {
@@ -47,6 +50,55 @@ public class AddMovie extends AppCompatActivity {
         String description = txtDescription.getText().toString();
         String releaseyear = txtReleaseYear.getText().toString();
         String rating = txtRating.getText().toString();
+
+        if (TextUtils.isEmpty(title)) {
+            Toast.makeText(getApplicationContext(), "Ingresa un titulo válido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(description)) {
+            Toast.makeText(getApplicationContext(), "Ingresa una descripción válida", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(releaseyear)) {
+            Toast.makeText(getApplicationContext(), "Ingresa un año de lanzamiento válido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        try{
+            int rlsYear = Integer.parseInt(releaseyear);
+            if(rlsYear < 0){
+                Toast.makeText(getApplicationContext(), "El año de lanzamiento no puede ser menor que 0", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if(rlsYear > 2022){
+                Toast.makeText(getApplicationContext(), "El año de lanzamiento válido no puede ser mayor al actual", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+        catch (NumberFormatException ex){
+            Toast.makeText(getApplicationContext(), "Ingresa un año de lanzamiento válido", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(rating)) {
+            Toast.makeText(getApplicationContext(), "Ingresa una calificación válida", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        try{
+            int rlsRating = Integer.parseInt(rating);
+            if(!(rlsRating >= 1 && rlsRating <= 4)){
+                Toast.makeText(getApplicationContext(), "La calificación debe estar entre 1 y 4", Toast.LENGTH_LONG).show();
+                return;
+            }
+        }
+        catch (NumberFormatException ex){
+            Toast.makeText(getApplicationContext(), "Ingresa un año de lanzamiento válido", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         Movie obj_movie = new Movie(title, description, releaseyear, rating);
 
