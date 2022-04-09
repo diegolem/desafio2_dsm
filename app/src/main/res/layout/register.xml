@@ -9,9 +9,14 @@
     android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:text="@string/nueva_cuenta" />
+        android:background="#FDF6EC "
+        android:text="@string/nueva_cuenta"
+        android:textAlignment="center"
+        android:textColor="#22577E"
+        android:textColorLink="#05595B"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/user"
@@ -30,7 +35,9 @@
         android:id="@+id/registerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/registrar" />
+        android:background="#22577E"
+        android:text="@string/registrar"
+        android:textColor="#FFF" />
 
     <ProgressBar
         android:id="@+id/progressBar"

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="#FDF6EC"
         android:gravity="center_horizontal"
         android:text="@string/pelicula"
-        android:textSize="24sp"
-        android:textColor="#015d52"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textColor="#06113C"
+        android:textSize="24sp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -20,7 +21,8 @@
             android:id="@+id/txtTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/nombre_de_pelicula" />
+            android:hint="@string/nombre_de_pelicula"
+            android:textColorLink="#22577E" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -31,7 +33,8 @@
             android:id="@+id/txtDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/descripci_n_de_la_pelicula" />
+            android:hint="@string/descripci_n_de_la_pelicula"
+            android:textColorLink="#22577E" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -42,7 +45,8 @@
             android:id="@+id/txtReleaseYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/a_o_de_estreno" />
+            android:hint="@string/a_o_de_estreno"
+            android:textColorLink="#22577E" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -51,20 +55,29 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtRating"
-            android:inputType="number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/calificaci_n_1_4" />
+            android:hint="@string/calificaci_n_1_4"
+            android:inputType="number"
+            android:textColorLink="#22577E" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:text="@string/guardar"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#22577E"
+        android:foregroundTint="#FFF"
         android:onClick="save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:text="@string/guardar"
+        android:textColor="#FFF"
+        android:textColorLink="#FFF" />
+
     <Button
-        android:text="@string/cancelar"
-        android:onClick="cancel"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C74B50"
+        android:onClick="cancel"
+        android:text="@string/cancelar"
+        android:textColor="#FFF" />
 </LinearLayout>
