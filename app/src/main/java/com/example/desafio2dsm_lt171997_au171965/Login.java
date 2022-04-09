@@ -78,22 +78,22 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Ocurrio un error, intentalo nuevamente.",Toast.LENGTH_LONG).show();
                     }
                 });
+            }
+        });
 
-                resetPasswordBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(getBaseContext(), ResetPassword.class);
-                        startActivity(intent);
-                    }
-                });
+        resetPasswordBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), ResetPassword.class);
+                startActivity(intent);
+            }
+        });
 
-                registerBtn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(getBaseContext(), Register.class);
-                        startActivity(intent);
-                    }
-                });
+        registerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getBaseContext(), Register.class);
+                startActivity(intent);
             }
         });
     }

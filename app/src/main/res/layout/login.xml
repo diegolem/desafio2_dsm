@@ -12,15 +12,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login"/>
+        android:text="@string/login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <EditText
         android:id="@+id/user"
+        style="@android:style/Widget.Material.Light.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/usuario" />
+
     <EditText
         android:id="@+id/pass"
+        style="@android:style/Widget.Material.Light.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/contrase_a"
@@ -28,16 +32,21 @@
 
     <Button
         android:id="@+id/loginBtn"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login" />
+
     <Button
         android:id="@+id/registerBtn"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/registro" />
+
     <Button
         android:id="@+id/resetPasswordBtn"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Colored"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/reiniciar_contrase_a" />
@@ -47,4 +56,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Diego Lemus - LT171997 y Erick Aguilar AU171965"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 </LinearLayout>

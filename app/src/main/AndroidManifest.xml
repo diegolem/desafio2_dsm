@@ -10,10 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight">
-        <activity android:name=".Movies"></activity>
-        <activity android:name=".AddMovie"/>
-        <activity android:name=".Register"></activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Movies" />
+        <activity android:name=".AddMovie" />
+        <activity android:name=".Register" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".ResetPassword"
             android:exported="true" />
